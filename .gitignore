@@ -1,0 +1,12 @@
+# ignore all folders
+/*
+!.gitignore
+
+# don't ignore this files
+!.zshrc
+!*.png
+!*.md
+
+# but doesn't ignore this folders
+!.config/
+!Pictures/Screenshots/my-configuration/
