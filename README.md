@@ -1,3 +1,3 @@
 # My Linux power level
 
-![screen](./screen.png)
+![screen](./Pictures/Screenshots/my-config/dracula_theme.png)
