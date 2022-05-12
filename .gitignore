@@ -9,3 +9,7 @@
 !.config/qtile/*.py
 !.config/qtile/.gitignore
 # screenshots
+!Pictures/*
+#!Pictures/Screenshots/*.png
+#/Pictures/Screenshots/*
+#!Pictures/Screenshots/my-config/*.png
