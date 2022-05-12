@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function send_notification() {
+    if [ $1 == 'us' ]
+    then
+	title="ENG"
+	subtitle="english"
+    else
+	title="ESP"
+	subtitle="spanish"
+    fi
+    dunstify "$title" "Key Layout is in $subtitle" -u normal -t 900
+}
+
+lyt=$(setxkbmap -query | grep layout)
+
+IFS=' '
+read -a starr <<< "$lyt"
+keymap_layout=${starr[1]}
+
+# echo "El layout actual es $keymap_layout"
+
+if [ $keymap_layout == 'us' ]
+then
+    setxkbmap latam
+    send_notification "es" 
+else
+    setxkbmap us
+    send_notification "us" 
+fi

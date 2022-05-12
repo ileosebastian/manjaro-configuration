@@ -16,16 +16,24 @@
 !.config/awesome
 
 # Zsh
+!.zshrc
 
+# Vim
+!.vimrc
 
 # Nvim
-
+!.config/nvim
 
 # Alacritty
-
+!.config/alacritty
 
 # Picom
+!.config/picom
 
+# My programs
+!.local
+/.local/*
+!.local/bin
 
 # screenshots
 !Pictures/
