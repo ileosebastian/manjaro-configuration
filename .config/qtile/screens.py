@@ -9,7 +9,7 @@ import os
 
 from variables import background, current_line, foreground, comment, cyan
 from variables import green, orange, pink, purple, red, yellow
-from variables import HOME, default_font, default_font_size
+from variables import HOME, default_font, default_font_bold, default_font_size
 from variables import bar_bg_color, bar_size
 
 
@@ -154,7 +154,7 @@ def init_screens():
                     widget.Clock(
                         # format='%d/%m/%Y %A %H:%M',
                         format=' %d/%m/%Y %A  神 %H:%M',
-                        font="Agave Nerd Font Bold",
+                        font=default_font_bold,
                         background=purple,
                         foreground=background
                     ),

@@ -11,10 +11,12 @@ alt = "mod1"
 ctrl = "control"
 spc = "space"
 
+
 # PROGRAMS
 terminal = "alacritty"
 
 
+# THEMES
 # My variables
 # Dracula Color Palette
 background = "#282a36"
@@ -29,9 +31,18 @@ purple = "#bd93f9"
 red = "#ff5555"
 yellow = "#f1fa8c"
 
-default_font = "Agave Nerd Font"
+
+# FONTS
+FONTS = [
+        "Agave Nerd Font",
+        "Cascadia Code",
+        "DaddyTimeMono Nerd Font",
+]
+default_font = FONTS[1]
+default_font_bold = FONTS[1] + " Bold"
 default_font_size = 16
 
+
+# BAR
 bar_bg_color = background
 bar_size = 28
-
