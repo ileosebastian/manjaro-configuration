@@ -7,27 +7,10 @@ from my_qtile_functions import change_keymap
 import arcobattery
 import os
 
-
-HOME = os.path.expanduser('~/')
-
-# Dracula Color Palette
-background = "#282a36"
-current_line = "#44475a"
-foreground = "#f8f8f2"
-comment = "#6272a4"
-cyan = "#8be9fd"
-green = "#50fa7b"
-orange = "#ffb86c"
-pink = "#ff79c6"
-purple = "#bd93f9"
-red = "#ff5555"
-yellow = "#f1fa8c"
-
-default_font = "Agave Nerd Font"
-default_font_size = 16
-
-bar_bg_color = background
-bar_size = 28
+from variables import background, current_line, foreground, comment, cyan
+from variables import green, orange, pink, purple, red, yellow
+from variables import HOME, default_font, default_font_size
+from variables import bar_bg_color, bar_size
 
 
 def init_screens():

@@ -4,17 +4,8 @@ from libqtile.config import Click
 from libqtile.lazy import lazy
 import os
 from my_qtile_functions import change_keymap, restart_qtile
-
-# VARS
-HOME = os.path.expanduser('~/')
-WALLPAPER = "berserker_into_white.png"
-
-# KEY DEFINITIONS
-mod = "mod4"
-shft = "shift"
-alt = "mod1"
-ctrl = "control"
-spc = "space"
+from variables import HOME, WALLPAPER, terminal
+from variables import mod, shft, alt, ctrl, spc
 
 
 def group_types(groups, kind):
@@ -84,7 +75,7 @@ def init_keys():
             # multiple stack panes
             Key([mod, shft], "Return", lazy.layout.toggle_split(),
                 desc="Toggle between split and unsplit sides of stack"),
-            Key([mod], "Return", lazy.spawn("alacritty"),
+            Key([mod], "Return", lazy.spawn(terminal),
                 desc="Launch terminal"),
 
             # Toggle between different layouts as defined below
