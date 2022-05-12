@@ -1,11 +1,10 @@
 *
 !.gitignore
 # config files
-#!/.config
-#/.config/*
-!/.config/qtile/
+!.config
+/.config/*
+!.config/qtile
+/.config/qtile/*
+!.config/qtile/*.py
+!.config/qtile/.gitignore
 # screenshots
-#!/Pictures
-#/Pictures/*
-#!/Pictures/Screenshots
-#/Pictures/Screenshots/*
