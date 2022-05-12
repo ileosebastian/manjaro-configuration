@@ -5,10 +5,27 @@
 # config files
 !.config
 /.config/*
+
+# Qtile
 !.config/qtile
 /.config/qtile/*
 !.config/qtile/*.py
 !.config/qtile/.gitignore
+
+# Awesome WM
+!.config/awesome
+
+# Zsh
+
+
+# Nvim
+
+
+# Alacritty
+
+
+# Picom
+
 
 # screenshots
 !Pictures/
