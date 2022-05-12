@@ -1,5 +1,6 @@
 *
 !.gitignore
+!*.md
 # config files
 !.config
 /.config/*
