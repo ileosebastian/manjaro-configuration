@@ -37,7 +37,7 @@ set noshowmode " disable to show modes (vim is a text editor based in modes)
 call plug#begin('~/.vim/plugged')
 
 " Themes
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'dracula/vim',{'as':'dracula'}
 
 " IDE
@@ -61,8 +61,8 @@ call plug#end()
 
 
 " Setting up for plugins
-" colorscheme gruvbox " set the theme
-colorscheme dracula
+colorscheme gruvbox " set the theme
+"colorscheme dracula
 
 " For NerdTree
 let NERDTreeQuitOnOpen=1

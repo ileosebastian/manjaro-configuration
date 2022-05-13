@@ -5,7 +5,6 @@ from libqtile.lazy import lazy
 from my_qtile_functions import get_separator
 from my_qtile_functions import change_keymap
 import arcobattery
-import os
 
 from variables import background, current_line, foreground, comment, cyan
 from variables import green, orange, pink, purple, red, yellow
