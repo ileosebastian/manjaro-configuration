@@ -2,7 +2,6 @@ from libqtile.config import Key
 from libqtile.config import Drag
 from libqtile.config import Click
 from libqtile.lazy import lazy
-import os
 from my_qtile_functions import change_keymap, restart_qtile
 from variables import HOME, WALLPAPER, terminal
 from variables import mod, shft, alt, ctrl, spc
