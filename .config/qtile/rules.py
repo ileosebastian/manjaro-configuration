@@ -16,6 +16,7 @@ def init_floating_layout(defaut_layouts):
     ], **defaut_layouts)
 
 
+# OLD config
 def init_floating_layouts_():
     return layout.Floating(
             float_rules=[

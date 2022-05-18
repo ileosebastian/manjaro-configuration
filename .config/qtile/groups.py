@@ -8,8 +8,5 @@ types = {
 
 def init_groups(kind):
     groups = []
-    try:
-        groups = [Group(i) for i in types[kind]]
-    except Exception:
-        groups = []
+    groups = [Group(i) for i in types[kind]]
     return groups

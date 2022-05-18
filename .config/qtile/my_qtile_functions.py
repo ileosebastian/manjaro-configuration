@@ -1,29 +1,27 @@
 from libqtile.lazy import lazy
 from libqtile import hook
 from libqtile import widget
-import os
 import subprocess
 
-from variables import background, current_line, foreground, comment, cyan
-from variables import green, orange, pink, purple, red, yellow
-from variables import HOME, default_font, default_font_size
-from variables import bar_bg_color, bar_size
+from variables import HOME
 
 
 def get_separator():
     return widget.Sep(
-                    linewidth=5,
-                    padding=0,
-                    foreground=current_line,
-                    background=background,
+                    linewidth=2,
+                    padding=2,
                     size_percent=100
                 )
+
+@lazy.function
+def set_key_map(qtile):
+    qtile.cmd_spawn("setxkbmap us")
 
 
 @lazy.function
 def restart_qtile(qtile):
-    qtile.cmd_spawn("setxkbmap us")
-    qtile.cmd_restart()
+    qtile.cmd_reload_config()
+    # qtile.cmd_restart()
 
 
 @lazy.function
@@ -31,12 +29,15 @@ def change_keymap(qtile):
     qtile.cmd_spawn("changekeymap")
 
     textbox = qtile.widgets_map["textbox"]
-    if textbox.info()["text"] == "ENG":
+    txt_parsed = textbox.info()["text"].split(' ')
+    if "ENG" in txt_parsed:
         qtile.widgets_map["textbox"].update("ESP")
-    elif textbox.info()["text"] == "ESP":
+    elif "ESP" in txt_parsed:
         qtile.widgets_map["textbox"].update("ENG")
 
 
 @hook.subscribe.startup_once
 def autostart():
     subprocess.Popen([HOME + '.config/qtile/autostart.sh'])
+
+
